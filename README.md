@@ -109,6 +109,8 @@ scripts/bench.sh                    # performance measurements
 - `src/app` — the egui app (Inter font): one editor-first window (recording
   setup when nothing is open, recent recordings off the title), recording widget,
   area picker, menu bar.
+- `site` — the download page, a SvelteKit site deployed on Vercel. See
+  `site/README.md`.
 
 ## Credits
 

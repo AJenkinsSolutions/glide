@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<style>
+			@font-face {
+				font-family: 'Inter Variable';
+				font-weight: 100 900;
+				src: url(../../node_modules/@fontsource-variable/inter/files/inter-latin-opsz-normal.woff2)
+					format('woff2-variations');
+			}
+			html,
+			body {
+				margin: 0;
+				width: 1200px;
+				height: 630px;
+				overflow: hidden;
+			}
+			body {
+				position: relative;
+				background:
+					radial-gradient(60% 80% at 92% 55%, rgb(214 40 31 / 0.32), transparent 70%),
+					#111113;
+				color: #f2f2f4;
+				font-family: 'Inter Variable', sans-serif;
+				-webkit-font-smoothing: antialiased;
+			}
+			.copy {
+				position: absolute;
+				left: 72px;
+				top: 0;
+				bottom: 0;
+				width: 470px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+			.brand {
+				display: flex;
+				align-items: center;
+				gap: 6px;
+				margin-left: -14px;
+				font-size: 44px;
+				font-weight: 620;
+				letter-spacing: -0.02em;
+			}
+			.brand img {
+				width: 104px;
+				height: 104px;
+			}
+			h1 {
+				margin: 18px 0 20px;
+				font-size: 66px;
+				font-weight: 640;
+				line-height: 1.04;
+				letter-spacing: -0.035em;
+			}
+			p {
+				margin: 0;
+				font-size: 25px;
+				line-height: 1.4;
+				color: #a3a3ab;
+			}
+			.shot {
+				position: absolute;
+				left: 590px;
+				top: 50%;
+				width: 720px;
+				transform: translateY(-50%);
+				border-radius: 16px;
+				box-shadow:
+					0 0 0 1px rgb(255 255 255 / 0.08),
+					0 40px 80px rgb(0 0 0 / 0.5);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="copy">
+			<div class="brand"><img src="icon.png" alt="" />Glide</div>
+			<h1>Product videos, in one take.</h1>
+			<p>An open-source screen recorder for the Mac, written in Rust.</p>
+		</div>
+		<img class="shot" src="poster.png" alt="" />
+	</body>
+</html>

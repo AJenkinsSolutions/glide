@@ -2,6 +2,7 @@ target/
 .DS_Store
 *.mov
 *.mp4
+!/site/src/lib/assets/*.mp4
 *.gif
 /recordings/
 .env
