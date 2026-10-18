@@ -7,3 +7,4 @@ target/
 /recordings/
 .env
 /dist/
+.artifacts/
