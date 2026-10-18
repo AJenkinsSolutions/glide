@@ -1243,6 +1243,9 @@ impl App {
             home::Action::Open(p) => push(Cmd::Open(p)),
             home::Action::RequestPermissions => {
                 std::thread::spawn(|| crate::capture::tcc::request_all(true, false, false, Duration::from_secs(60)));
+                // macOS shows the screen recording prompt only once per app;
+                // after that the request is silent, so go to the setting.
+                macos::open_screen_recording_settings();
             }
             home::Action::ResizeWindow { id, width, height } => {
                 let note = match crate::capture::winsize::resize(id, width as f64, height as f64) {

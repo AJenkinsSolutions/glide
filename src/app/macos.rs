@@ -117,6 +117,14 @@ pub fn open(path: &std::path::Path) {
     objc2_app_kit::NSWorkspace::sharedWorkspace().openURL(&url);
 }
 
+/// Open System Settings › Privacy & Security › Screen & System Audio Recording.
+pub fn open_screen_recording_settings() {
+    let s = crate::util::ns("x-apple.systempreferences:com.apple.preference.security?Privacy_ScreenCapture");
+    if let Some(url) = objc2_foundation::NSURL::URLWithString(&s) {
+        objc2_app_kit::NSWorkspace::sharedWorkspace().openURL(&url);
+    }
+}
+
 /// Put a file on the pasteboard (paste into Slack, Mail, Finder…).
 pub fn copy_file(path: &std::path::Path) {
     use objc2::runtime::ProtocolObject;
